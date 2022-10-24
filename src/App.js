@@ -15,7 +15,7 @@ export default function App() {
     const [loading, setLoading] = useState(false);
     const [key, setKey] = useState("");
     const [image, setImage] = useState("");
-    const [porcentagem, setPorcentagem] = useState("");
+    const [porcentagem, setPorcentagem] = useState(10);
     const [nome, setNome] = useState("");
     
 
@@ -26,7 +26,7 @@ export default function App() {
     return (
         <BrowserRouter>
         <ResetCss/>
-            <LoginContext.Provider value = {{email , setEmail, senha, setSenha, loading, setLoading, key, setKey, setImage, image}}>
+            <LoginContext.Provider value = {{porcentagem, setPorcentagem, email , setEmail, senha, setSenha, loading, setLoading, key, setKey, setImage, image}}>
             <Routes>
                 <Route path="/" element={<Login />}/>
                 <Route path="/cadastro" element={<Cadastro />}/>

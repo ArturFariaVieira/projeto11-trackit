@@ -5,7 +5,9 @@ import { useState, useEffect, useContext } from "react";
 import  axios  from "axios";
 import { useNavigate } from "react-router-dom";
 import { LoginContext } from "../Contexts/Profilecontext"
+import { CircularProgressbar } from 'react-circular-progressbar';
 export default function Footer() {
+    const {porcentagem} = useContext(LoginContext)
     const Navigate = useNavigate;
     return (
         <Caixafooter>
@@ -39,6 +41,7 @@ width: 375px;
 position: fixed;
 bottom: 0;
 display:flex;
+background-color: #FFFFFF;
 a{
     text-decoration: none;
 }

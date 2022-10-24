@@ -97,6 +97,11 @@ display: flex;
 flex-direction: column;
 align-items: center;
 justify-content: center;
+background-color: #FFFFFF;
+a{
+    text-decoration: underline;
+    color: #52B6FF;
+};
 `;
 
 const Caixalogo = Styled.div`

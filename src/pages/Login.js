@@ -11,7 +11,7 @@ import { Link, useNavigate } from "react-router-dom";
 
 export default function Login( ) {
     
-    const { setEmail, setSenha, email, senha, loading, setLoading, setImage } = useContext(LoginContext)
+    const { setEmail, setSenha, email, senha, loading, setLoading, setImage, setKey } = useContext(LoginContext)
     const {URLlogin} = Constantes;
     const Navigate = useNavigate();
 
@@ -27,6 +27,7 @@ export default function Login( ) {
         let promise= axios.post(URLlogin, body);
         promise.then((res) => {
             setImage(res.data.image)
+            setKey(res.data.token)
             console.log(res.data)
             Navigate("/hoje");
         })
@@ -84,6 +85,10 @@ display: flex;
 flex-direction: column;
 align-items: center;
 justify-content: center;
+a{
+    text-decoration: underline;
+    color: #52B6FF;
+};
 `;
 
 const Caixalogo = Styled.div`
@@ -124,7 +129,6 @@ form{
         padding: 11px;
     }
     button{
-
     width: 303px;
     height: 45px;
     font-family: 'Lexend Deca', sans-serif;
@@ -156,6 +160,9 @@ h1{
     font-weight: 400;
     line-height: 16px;
     color: #52B6FF;
+    text-decoration: none;
+    
 }
+
 `
 
