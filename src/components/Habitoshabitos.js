@@ -1,8 +1,4 @@
 import Styled from "styled-components";
-import { Constantes } from "../constants/constantes"
-import { useState, useEffect, useContext } from "react";
-import  axios  from "axios";
-import { useNavigate } from "react-router-dom";
 import Vector from "../assets/Vector.svg"
 
 export default function Habitoshabitos({ id, name, days, funcao } ) {

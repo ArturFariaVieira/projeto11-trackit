@@ -1,9 +1,4 @@
 import Styled from "styled-components";
-import { Constantes } from "../constants/constantes"
-import { useState, useEffect, useContext } from "react";
-import  axios  from "axios";
-import { useNavigate } from "react-router-dom";
-import GreenCheckmark from "../assets/greencheckbox-outline.svg"
 import Checkmark from "../assets/check.png"
 
 export default function Habitoshoje({ id, name, funcao, sequence, highestsequence, done  } ) {

@@ -1,6 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom"
-import { useState, useEffect, } from "react"
-import Styled from "styled-components"
+import { useState } from "react"
 import { ResetCss } from "./resetcss"
 import Login from "./pages/Login"
 import Cadastro from "./pages/Cadastro"
@@ -16,7 +15,6 @@ export default function App() {
     const [key, setKey] = useState("");
     const [image, setImage] = useState("");
     const [porcentagem, setPorcentagem] = useState(10);
-    const [nome, setNome] = useState("");
     
 
 
@@ -46,23 +44,7 @@ export default function App() {
 
 }
 
-const Layoutpagina = Styled.div`
-height: 667px;
-width: 375px;
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-`
-const Button = Styled.button`
-height: 45px;
-width: 303px;
-font-family: 'Lexend Deca', sans-serif;
-font-size: 21px;
-color:#FFFFFF;
-background-color: #52B6FF;
-display:${(props) => props.visible? "none" : ""};
 
-`
+
 
 

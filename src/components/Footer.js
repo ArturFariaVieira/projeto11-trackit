@@ -1,8 +1,6 @@
 import Styled from "styled-components";
 import { Link } from "react-router-dom";
-import { Constantes } from "../constants/constantes"
-import { useState, useEffect, useContext } from "react";
-import  axios  from "axios";
+import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { LoginContext } from "../Contexts/Profilecontext"
 import { CircularProgressbar } from 'react-circular-progressbar';
